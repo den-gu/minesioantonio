@@ -8,7 +8,7 @@ import Loader from "../components/Loader";
 import Cursor from "../components/Cursor";
 
 // Files
-import cesarolvrCV from "../files/cesar-oliveira-resume.pdf";
+import minesioantonioCV from "../files/minesio-antonio-resume.pdf";
 
 // Styles
 import "../styles/global.scss";
@@ -36,7 +36,7 @@ const Actions = () => {
               <li>
                 <a
                   className="hover:text-[var(--tw-text-gray-primary)]"
-                  href={cesarolvrCV}
+                  href={minesioantonioCV}
                   download={true}
                   target="_blank"
                 >
@@ -50,7 +50,7 @@ const Actions = () => {
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/in/cesarolvr/"
+                  href="https://www.linkedin.com/in/min%C3%A9sio-ant%C3%B3nio-002473127/"
                   target="_blank"
                   className="hover:text-[var(--tw-text-gray-primary)]"
                 >
@@ -76,7 +76,7 @@ const Actions = () => {
                   />
                   <span className="inline-block ml-5">
                     <ScrambleText
-                      text="invite to -> contact@cesarolvr.com"
+                      text="invite to -> info@minesioantonio.com"
                       className="scramble-text"
                       duration={1.4}
                       placeholder="__"
@@ -84,7 +84,7 @@ const Actions = () => {
                   </span>
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="https://github.com/cesarolvr/"
                   target="_blank"
@@ -97,8 +97,8 @@ const Actions = () => {
                     placeholder=".:"
                   />
                 </a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a
                   href="https://codepen.io/cesarolvr/"
                   target="_blank"
@@ -111,8 +111,8 @@ const Actions = () => {
                     placeholder=".:"
                   />
                 </a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a
                   href="https://leetcode.com/u/cesarolvr/"
                   target="_blank"
@@ -125,44 +125,44 @@ const Actions = () => {
                     placeholder=".:"
                   />
                 </a>
-              </li>
+              </li> */}
               <li>
                 {" "}
                 <a
-                  href="mailto:contact@cesarolvr.com"
+                  href="mailto:info@minesioantonio.com"
                   className="hover:text-[var(--tw-text-gray-primary)]"
                 >
                   <ScrambleText
                     text="Send me an e-mail"
                     className="scramble-text"
-                    duration={2.2}
+                    duration={1.6}
                     placeholder=".:"
                   />
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/cesarolvr/"
+                  href="https://www.instagram.com/minesio.antonio/"
                   target="_blank"
                   className="hover:text-[var(--tw-text-gray-primary)]"
                 >
                   <ScrambleText
                     text="Follow me on Instagram"
                     className="scramble-text inline-block"
-                    duration={2.4}
+                    duration={1.8}
                     placeholder=".:"
                   />
-                  <span className="inline-block ml-5">
+                  {/* <span className="inline-block ml-5">
                     <ScrambleText
                       text="(only friends)"
                       className="scramble-text"
-                      duration={2.4}
+                      duration={2}
                       placeholder="__"
                     />
-                  </span>
+                  </span> */}
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="https://goodreads.com/cesarolvr"
                   target="_blank"
@@ -183,8 +183,8 @@ const Actions = () => {
                     />
                   </span>
                 </a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a
                   href="https://github.com/cesarolvr/cesarolvr-www"
                   target="_blank"
@@ -200,12 +200,12 @@ const Actions = () => {
                     <ScrambleText
                       text="(only devs)"
                       className="scramble-text"
-                        duration={2.8}
+                      duration={2.8}
                       placeholder="__"
                     />
                   </span>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </Container>
         </main>
@@ -213,7 +213,7 @@ const Actions = () => {
         <br />
         <br />
         <br />
-        <Note />
+        {/* <Note /> */}
       </div>
     </>
   );
@@ -221,4 +221,4 @@ const Actions = () => {
 
 export default Actions;
 
-export const Head = () => <title>Utilities | cesarolvr</title>;
+export const Head = () => <title>Utilities | minesioantonio</title>;

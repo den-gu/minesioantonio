@@ -3,68 +3,59 @@ import * as React from "react";
 import { FiCopy } from "@react-icons/all-files/fi/FiCopy";
 import { FiDownload } from "@react-icons/all-files/fi/FiDownload";
 import { FiAward } from "@react-icons/all-files/fi/FiAward";
-import { FiGithub } from "@react-icons/all-files/fi/FiGithub";
+import { FaBehance } from "@react-icons/all-files/fa/FaBehance";
 import { FiCalendar } from "@react-icons/all-files/fi/FiCalendar";
+import { FaWhatsapp } from "@react-icons/all-files/fa/FaWhatsapp";
 import { FiInstagram } from "@react-icons/all-files/fi/FiInstagram";
+import { FiFacebook } from "@react-icons/all-files/fi/FiFacebook";
 import { FiBook } from "@react-icons/all-files/fi/FiBook";
 import { FiMail } from "@react-icons/all-files/fi/FiMail";
 import { FiCoffee } from "@react-icons/all-files/fi/FiCoffee";
 
 // Files
-import cesarolvrCV from "../files/cesar-oliveira-resume.pdf";
+import minesioantonioCV from "../files/minesio-antonio-resume.pdf";
 
-const bioDescription = `A decade of experience as a Software Engineer (Front-end focused), working on
-large-scale and high-impact projects for digital companies, where
-I've crafted digital acquisition experiences, dashboards,
-awwwards-like websites, design systems, animations libraries,
-mobile apps and email marketing tools. I'm really focused about resolve real problems through technology,
-specifically web development and creative development.`;
+const bioDescription = `Sou um Humano que quer resolver problemas visuais, agregando
+personalidade e valor às marcas e empresas, utilizando
+ferramentas modernas faço o meu melhor para tornar os visuais
+atrativos e duradouros.`;
 
 const careerPath = [
   {
-    role: "Tech Lead | Senior Front-end Engineer",
-    details: `Itaú Unibanco | São Paulo, Brazil | 2023 -> current`,
+    role: "Gestor de Marketing | Designer Grafico",
+    details: `Mapendzi | Maputo, Moçambique | 2023`,
   },
   {
-    role: "Senior Front-end Engineer",
-    details: `Red Ventures | Charlotte, USA | 2018 -> 2023`,
-  },
-
-  {
-    role: "Front-end Engineer",
-    details: `Shawee | São Paulo, Brazil | 2017 -> 2018`,
+    role: "Gestor de Marketing | Designer Grafico",
+    details: `MY BUBU's | Maputo, Moçambique | 2023`,
   },
   {
-    role: "Front-end Engineer",
-    details: `Horizon Four | São Paulo, Brazil | 2017 -> 2018`,
-  },
-  {
-    role: "A ”Handyman Engineer”",
-    details: `Ag. Empreendora | São Paulo, Brazil | 2016 -> 2017`,
-  },
+    role: "Gestor de Marketing | Designer Grafico",
+    details: `Pepsi co Mozambique | Maputo, Moçambique | 2018 -> 2019`,
+  }
 ];
 
 const academyPath = [
   {
-    role: "MicroMaster® Program in Algorithms and Data Structures",
-    details: `University of California, San Diego (UCSD) | California, USA | 2024 -> 2025`,
+    role: "INFORMÁTICA E TELECOMUNICAÇÕES",
+    details: `IPET | Maputo, Moçambique | 2017 -> 2020`,
   },
   {
-    role: "Postgraduate Diploma (PgDip) in Leadership and Innovation",
-    details: `Getulio Vargas Foundation (FGV) | São Paulo, Brazil | 2023 -> 2024`,
+    role: "COMPUTER SCIENCE",
+    details: `USTM | Maputo, Moçambique | 2014 -> 2016`,
   },
-  {
-    role: "Summer Programm in Usability Engineering",
-    details: `University of São Paulo (USP) | São Paulo, Brazil | 2017 -> 2018`,
-  },
-  {
-    role: "Bachelor (BA) in Digital design",
-    details: `Anhembi Morumbi University (UAM) | São Paulo, Brazil | 2016 -> 2019`,
-  },
-  {
-    role: "Career and Technical Education (CTE) in Information Systems",
-    details: `São Paulo State Technical School (ETEC) | São Paulo, Brazil | 2013 -> 2015`,
-  },
+  // {
+  //   role: "Summer Programm in Usability Engineering",
+  //   details: `University of São Paulo (USP) | São Paulo, Brazil | 2017 -> 2018`,
+  // },
+  // {
+  //   role: "Bachelor (BA) in Digital design",
+  //   details: `Anhembi Morumbi University (UAM) | São Paulo, Brazil | 2016 -> 2019`,
+  // },
+  // {
+  //   role: "Career and Technical Education (CTE) in Information Systems",
+  //   details: `São Paulo State Technical School (ETEC) | São Paulo, Brazil | 2013 -> 2015`,
+  // },
 ];
 
 const openSourcePath = [
@@ -110,25 +101,25 @@ const quickActionList = [
     nick: "c",
     icon: <FiCopy />,
     type: 1,
-    textToCopy: "https://cesarolvr.com",
+    textToCopy: "https://minesioantonio.com",
   },
   {
     text: "Download CV",
     nick: "d",
     icon: <FiDownload />,
-    target: cesarolvrCV,
+    target: minesioantonioCV,
   },
   {
     text: "Know my career",
     nick: "k",
     icon: <FiAward />,
-    target: "https://www.linkedin.com/in/cesarolvr/",
+    target: "https://www.linkedin.com/in/min%C3%A9sio-ant%C3%B3nio-002473127/",
   },
   {
-    text: "See my github",
-    nick: "g",
-    icon: <FiGithub />,
-    target: "https://github.com/cesarolvr/",
+    text: "See my portfolio",
+    nick: "p",
+    icon: <FaBehance />,
+    target: "https://www.behance.net/minesioantonio",
   },
   {
     text: "Book a meeting",
@@ -140,26 +131,38 @@ const quickActionList = [
     text: "Send an email",
     nick: "e",
     icon: <FiMail />,
-    target: "mailto:contact@cesarolvr.com",
+    target: "mailto:info@minesioantonio.com",
+  },
+  {
+    text: "Chat on whatsapp",
+    nick: "w",
+    icon: <FaWhatsapp />,
+    target: "https://wa.me/+258848982463",
+  },
+  {
+    text: "Find me on facebook",
+    nick: "f",
+    icon: <FiFacebook />,
+    target: "https://web.facebook.com/minesioantoniio/",
   },
   {
     text: "Follow me on instagram",
     nick: "g",
     icon: <FiInstagram />,
-    target: "https://www.instagram.com/cesarolvr/",
-  },
-  {
-    text: "See my current readings",
-    nick: "r",
-    icon: <FiBook />,
-    target: "https://goodreads.com/cesarolvr",
-  },
-  {
-    text: "View source code",
-    nick: "r",
-    icon: <FiCoffee />,
-    target: "https://github.com/cesarolvr/cesarolvr-www",
-  },
+    target: "https://www.instagram.com/minesio.antonio/",
+  }
+  // {
+  //   text: "See my current readings",
+  //   nick: "r",
+  //   icon: <FiBook />,
+  //   target: "https://goodreads.com/cesarolvr",
+  // },
+  // {
+  //   text: "View source code",
+  //   nick: "r",
+  //   icon: <FiCoffee />,
+  //   target: "https://github.com/cesarolvr/cesarolvr-www",
+  // },
 ];
 
 export {

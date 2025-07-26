@@ -1,8 +1,8 @@
 {
-  "name": "cesarolvr",
+  "name": "minesioantonio",
   "version": "1.0.0",
   "private": true,
-  "description": "cesarolvr",
+  "description": "minesioantonio website",
   "keywords": [
     "gatsby"
   ],
@@ -16,9 +16,13 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@react-icons/all-files": "^4.1.0",
+    "@react-three/drei": "^9.106.0",
+    "@react-three/fiber": "^8.16.7",
     "autoprefixer": "^10.4.17",
     "classnames": "^2.5.1",
     "countup.js": "^2.8.0",
+    "framer-motion": "^11.2.10",
+    "framer-motion-3d": "^11.2.10",
     "gatsby": "^5.13.1",
     "gatsby-plugin-google-gtag": "^5.13.1",
     "gatsby-plugin-image": "^3.13.0",
@@ -30,9 +34,11 @@
     "gatsby-source-filesystem": "^5.13.0",
     "gatsby-transformer-sharp": "^5.13.0",
     "gsap": "^3.13.0",
+    "lenis": "^1.1.1",
+    "leva": "^0.9.35",
     "mousetrap": "^1.6.5",
     "postcss": "^8.4.33",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-dom": "^18.2.0",
     "react-syntax-highlighter": "^15.6.1",
     "sass": "^1.70.0",

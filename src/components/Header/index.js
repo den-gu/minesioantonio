@@ -26,13 +26,13 @@ const Header = ({ onThemeChange, theme, disableScramble = false }) => {
               <small className="sm:text-[18px] text-[14px]">
                 {!isMobile ? (
                   <ScrambleText
-                    text={`São Paulo, Brazil`}
+                    text={`Maputo, Mozambique`}
                     className="scramble-text"
                     duration={3}
                   />
                 ) : (
                   <ScrambleText
-                    text={`Brazil`}
+                    text={`Mozambique`}
                     className="scramble-text"
                     duration={3}
                   />
@@ -56,7 +56,18 @@ const Header = ({ onThemeChange, theme, disableScramble = false }) => {
                 />
               </strong>
             </span>
+            <br />
+            <span onClick={onThemeChange} className="underline cursor-pointer">
+              <strong>
+                <ScrambleText
+                  text={`${theme === "dark" ? "Portuguese" : "English"}`}
+                  className="scramble-text"
+                  duration={3.9}
+                />
+              </strong>
+            </span>
           </p>
+          <br />
         </div>
       ) : (
         <p className="w-[100px] sm:w-[33%]">
@@ -91,13 +102,13 @@ const Header = ({ onThemeChange, theme, disableScramble = false }) => {
         <Link to="/">
           {!disableScramble ? (
             <ScrambleText
-              text="cesarolvr.com"
+              text="minesioantonio.com"
               className="scramble-text"
               placeholder="*"
               duration={2.5}
             />
           ) : (
-            <>cesarolvr.com</>
+            <>minesioantonio.com</>
           )}
         </Link>
       </div>
@@ -122,13 +133,46 @@ const Header = ({ onThemeChange, theme, disableScramble = false }) => {
 
         <li>
           <Link
-            to="/blog"
-            title="soon"
-            className={pathname?.startsWith("/blog") ? `-active` : ``}
+            to="/services/"
+            className={pathname?.startsWith("/services") ? `-active` : ``}
           >
             {!disableScramble ? (
               <ScrambleText
-                text="Blog"
+                text="Services"
+                className="scramble-text"
+                duration={3}
+              />
+            ) : (
+              <>Services</>
+            )}
+          </Link>
+        </li>
+
+        {/* <li>
+          <Link
+            to="/work"
+            className={pathname?.startsWith("/work") ? `-active` : ``}
+          >
+            {!disableScramble ? (
+              <ScrambleText
+                text="Featured work"
+                className="scramble-text"
+                duration={3}
+              />
+            ) : (
+              <>Blog</>
+            )}
+          </Link>
+        </li> */}
+
+        <li>
+          <Link
+            to="/work"
+            className={pathname?.startsWith("/work") ? `-active` : ``}
+          >
+            {!disableScramble ? (
+              <ScrambleText
+                text="Featured work"
                 className="scramble-text"
                 duration={3}
               />
@@ -138,7 +182,7 @@ const Header = ({ onThemeChange, theme, disableScramble = false }) => {
           </Link>
         </li>
 
-        <li>
+        {/* <li>
           <a href="https://github.com/cesarolvr/" target="_blank">
             {!disableScramble ? (
               <ScrambleText
@@ -150,7 +194,7 @@ const Header = ({ onThemeChange, theme, disableScramble = false }) => {
               <>Experiments</>
             )}
           </a>
-        </li>
+        </li> */}
         <li>
           <Link
             to="/utilities/"

@@ -10,7 +10,7 @@ import { FiCopy } from "@react-icons/all-files/fi/FiCopy";
 import { FiDownload } from "@react-icons/all-files/fi/FiDownload";
 
 // Files
-import cesarolvrCV from "../files/cesar-oliveira-resume.pdf";
+import minesioantonioCV from "../files/minesio-antonio-resume.pdf";
 
 // Context
 import { State } from "../components/Layout";
@@ -37,7 +37,7 @@ const panelMap = (index) => {
   const map = {
     0: (
       <ol className="career-path">
-        <br />
+        {/* <br />
         <div className="border-l-2 border-[var(--border-secondary)] pl-4">
           Check out my{" "}
           <a
@@ -47,7 +47,7 @@ const panelMap = (index) => {
             LinkedIn experience section
           </a>{" "}
           for more details
-        </div>
+        </div> */}
         {careerPath.map(({ role, details, description }, index) => {
           return (
             <li key={index} className="about-career-experience">
@@ -72,59 +72,60 @@ const panelMap = (index) => {
           );
         })}
       </ol>
-    ),
-    2: (
-      <ol className="career-path -academic">
-        {openSourcePath.map(({ role, details, description, link }, index) => {
-          return (
-            <li key={index} className="about-career-experience">
-              <h4 className="role">{role}</h4>
-              <br />
-              <h5 className="infos">{details}</h5>
-              <p className="description">{description}</p>
-              {link && (
-                <a href={link} target="_blank" className="link">
-                  {link}
-                </a>
-              )}
-            </li>
-          );
-        })}
-      </ol>
-    ),
-    3: (
-      <ol className="career-path -academic">
-        {volunteeringPath.map(({ role, details, description }, index) => {
-          return (
-            <li key={index} className="about-career-experience">
-              <h4 className="role">{role}</h4>
-              <br />
-              <h5 className="infos">{details}</h5>
-              <p className="description">{description}</p>
-            </li>
-          );
-        })}
-      </ol>
-    ),
-    4: (
-      <ol className="career-path -academic">
-        {hackingPath.map(({ role, details, description, link }, index) => {
-          return (
-            <li key={index} className="about-career-experience">
-              <h4 className="role">{role}</h4>
-              <br />
-              <h5 className="infos">{details}</h5>
-              <p className="description">{description}</p>
-              {link && (
-                <a href={link} target="_blank" className="link">
-                  {link}
-                </a>
-              )}
-            </li>
-          );
-        })}
-      </ol>
-    ),
+    )
+    // ,
+    // 2: (
+    //   <ol className="career-path -academic">
+    //     {openSourcePath.map(({ role, details, description, link }, index) => {
+    //       return (
+    //         <li key={index} className="about-career-experience">
+    //           <h4 className="role">{role}</h4>
+    //           <br />
+    //           <h5 className="infos">{details}</h5>
+    //           <p className="description">{description}</p>
+    //           {link && (
+    //             <a href={link} target="_blank" className="link">
+    //               {link}
+    //             </a>
+    //           )}
+    //         </li>
+    //       );
+    //     })}
+    //   </ol>
+    // ),
+    // 3: (
+    //   <ol className="career-path -academic">
+    //     {volunteeringPath.map(({ role, details, description }, index) => {
+    //       return (
+    //         <li key={index} className="about-career-experience">
+    //           <h4 className="role">{role}</h4>
+    //           <br />
+    //           <h5 className="infos">{details}</h5>
+    //           <p className="description">{description}</p>
+    //         </li>
+    //       );
+    //     })}
+    //   </ol>
+    // ),
+    // 4: (
+    //   <ol className="career-path -academic">
+    //     {hackingPath.map(({ role, details, description, link }, index) => {
+    //       return (
+    //         <li key={index} className="about-career-experience">
+    //           <h4 className="role">{role}</h4>
+    //           <br />
+    //           <h5 className="infos">{details}</h5>
+    //           <p className="description">{description}</p>
+    //           {link && (
+    //             <a href={link} target="_blank" className="link">
+    //               {link}
+    //             </a>
+    //           )}
+    //         </li>
+    //       );
+    //     })}
+    //   </ol>
+    // ),
   };
 
   return map[index];
@@ -176,16 +177,15 @@ const About = () => {
           <div className="bio column">
             <h3 className="about-title mb-2 font-bold text-[18px]">Bio</h3>
             <p className="paragraph">
-              A decade of experience as a Software Engineer (Front-end focused),
-              working on large-scale and high-impact projects for digital
-              companies, where I've crafted digital acquisition experiences,
-              dashboards, awwwards-like websites, design systems, animations
-              libraries, mobile apps and email marketing tools.
+              Sou um Humano que quer resolver problemas visuais, agregando
+              personalidade e valor às marcas e empresas, utilizando
+              ferramentas modernas faço o meu melhor para tornar os visuais
+              atrativos e duradouros.
             </p>
-            <p className="paragraph">
+            {/* <p className="paragraph">
               I'm really focused about resolve real problems through technology,
               specifically web development and creative development.
-            </p>
+            </p> */}
             <ul className="control">
               <li>
                 <button className="-icon" onClick={copyText}>
@@ -194,7 +194,7 @@ const About = () => {
                 </button>
               </li>
               <li>
-                <a className="button -icon" href={cesarolvrCV} download={true}>
+                <a className="button -icon" href={minesioantonioCV} download={true}>
                   <FiDownload />
                   <p>Download CV</p>
                 </a>
@@ -210,18 +210,18 @@ const About = () => {
                   title: "Academy",
                   isBlocked: false,
                 },
-                {
-                  title: "Open source",
-                  isBlocked: false,
-                },
-                {
-                  title: "Volunteering",
-                  isBlocked: false,
-                },
-                {
-                  title: "Hacking",
-                  isBlocked: false,
-                },
+                // {
+                //   title: "Open source",
+                //   isBlocked: false,
+                // },
+                // {
+                //   title: "Volunteering",
+                //   isBlocked: false,
+                // },
+                // {
+                //   title: "Hacking",
+                //   isBlocked: false,
+                // },
               ].map(({ title, isBlocked }, index) => {
                 return (
                   <button
@@ -241,7 +241,7 @@ const About = () => {
             {panelMap(activePanel)}
           </div>
         </main>
-        <Note />
+        {/* <Note /> */}
       </div>
     </>
   );
@@ -249,4 +249,4 @@ const About = () => {
 
 export default About;
 
-export const Head = () => <title>Me | cesarolvr</title>;
+export const Head = () => <title>Me | minesioantonio</title>;

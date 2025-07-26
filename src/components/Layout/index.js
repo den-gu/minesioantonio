@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
       }}
     >
       <div className={`layout`}>
-        <div
+        {/* <div
           id="awwwards"
           style={{
             position: "fixed",
@@ -70,7 +70,7 @@ const Layout = ({ children }) => {
               </g>
             </svg>
           </a>
-        </div>
+        </div> */}
         <>
           {children}
           <Modal
