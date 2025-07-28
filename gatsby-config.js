@@ -42,8 +42,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "cesarolvr.com",
-        short_name: "cesarolvr",
+        name: "minesioantonio.netlify.app",
+        short_name: "minesioantonio",
         start_url: "/",
         background_color: "#222222",
         theme_color: "#222222",
