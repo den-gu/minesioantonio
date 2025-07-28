@@ -86,49 +86,6 @@ const Actions = () => {
               </li>
               {/* <li>
                 <a
-                  href="https://github.com/cesarolvr/"
-                  target="_blank"
-                  className="hover:text-[var(--tw-text-gray-primary)]"
-                >
-                  <ScrambleText
-                    text="See my Github"
-                    className="scramble-text"
-                    duration={1.6}
-                    placeholder=".:"
-                  />
-                </a>
-              </li> */}
-              {/* <li>
-                <a
-                  href="https://codepen.io/cesarolvr/"
-                  target="_blank"
-                  className="hover:text-[var(--tw-text-gray-primary)]"
-                >
-                  <ScrambleText
-                    text="Star my Codepen"
-                    className="scramble-text"
-                    duration={1.8}
-                    placeholder=".:"
-                  />
-                </a>
-              </li> */}
-              {/* <li>
-                <a
-                  href="https://leetcode.com/u/cesarolvr/"
-                  target="_blank"
-                  className="hover:text-[var(--tw-text-gray-primary)]"
-                >
-                  <ScrambleText
-                    text="Check my Leetcode"
-                    className="scramble-text"
-                    duration={2}
-                    placeholder=".:"
-                  />
-                </a>
-              </li> */}
-              <li>
-                {" "}
-                <a
                   href="mailto:info@minesioantonio.com"
                   className="hover:text-[var(--tw-text-gray-primary)]"
                 >
@@ -139,7 +96,50 @@ const Actions = () => {
                     placeholder=".:"
                   />
                 </a>
+              </li> */}
+              <li>
+                <a
+                  href="https://www.behance.net/minesioantonio"
+                  target="_blank"
+                  className="hover:text-[var(--tw-text-gray-primary)]"
+                >
+                  <ScrambleText
+                    text="See my portfolio"
+                    className="scramble-text"
+                    duration={1.6}
+                    placeholder=".:"
+                  />
+                </a>
               </li>
+              <li>
+                <a
+                  href="https://wa.me/+258848982463"
+                  target="_blank"
+                  className="hover:text-[var(--tw-text-gray-primary)]"
+                >
+                  <ScrambleText
+                    text="Chat on whatsapp"
+                    className="scramble-text"
+                    duration={1.8}
+                    placeholder=".:"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://web.facebook.com/minesioantoniio/"
+                  target="_blank"
+                  className="hover:text-[var(--tw-text-gray-primary)]"
+                >
+                  <ScrambleText
+                    text="Find me on facebook"
+                    className="scramble-text"
+                    duration={2}
+                    placeholder=".:"
+                  />
+                </a>
+              </li>
+
               <li>
                 <a
                   href="https://www.instagram.com/minesio.antonio/"
@@ -149,7 +149,7 @@ const Actions = () => {
                   <ScrambleText
                     text="Follow me on Instagram"
                     className="scramble-text inline-block"
-                    duration={1.8}
+                    duration={2.2}
                     placeholder=".:"
                   />
                   {/* <span className="inline-block ml-5">

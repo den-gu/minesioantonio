@@ -8,7 +8,7 @@ export default function Projects({ setActiveMenu }) {
                 {
                     projects.map((project, i) => {
                         return (
-                            <li onMouseOver={() => { setActiveMenu(i) }} key={project.title} className='text-[3vw] p-5 border-t border-zinc-400'>
+                            <li onMouseOver={() => { setActiveMenu(i) }} key={project.title} className='text-[2vw] p-5 border-t border-zinc-400'>
                                 <p>{project.title}</p>
                             </li>
                         )

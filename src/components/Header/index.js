@@ -177,7 +177,7 @@ const Header = ({ onThemeChange, theme, disableScramble = false }) => {
                 duration={3}
               />
             ) : (
-              <>Blog</>
+              <>Featured work</>
             )}
           </Link>
         </li>

@@ -1,6 +1,6 @@
 export const projects = [
     {
-        title: "Identidade visual",
+        title: "Visual Identity",
         src: "/images/5.jpg"
     },
     {
@@ -8,23 +8,23 @@ export const projects = [
         src: "/images/6.jpg"
     },
     {
-        title: "Social Media Manager",
+        title: "Social Media Management",
         src: "/images/7.jpg"
     },
     {
-        title: "Creative Director",
+        title: "Creative Direction",
         src: "/images/2.jpg"
     },
     {
-        title: "Criador de conteudo",
+        title: "Content Creation",
         src: "/images/1.jpg"
     },
     {
-        title: "Spot Publicitario",
+        title: "Advertising Spot",
         src: "/images/3.jpg"
     },
-    // {
-    //     title: "Arianna Lago",
-    //     src: "/images/4.jpg"
-    // }
+    {
+        title: "Photography",
+        src: "/images/4.jpg"
+    }
 ]

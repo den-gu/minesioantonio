@@ -1,139 +1,115 @@
-import React, { useEffect, useState, useContext } from "react";
-import Scene from "../components/Scene";
-import Projects from "../components/Projects";
-import Lenis from 'lenis'
-// import classNames from "classnames";
+'use client';
 
-// Components
+import React, { useEffect, useRef, useState } from 'react';
+import Lenis from '@studio-freight/lenis'
+import { useTransform, useScroll, motion } from 'framer-motion';
+
+import { Link } from "gatsby";
+import ScrambleText from "../components/ScrambleText";
 import Header from "../components/Header";
-import Note from "../components/Note";
 import Loader from "../components/Loader";
-import Cursor from "../components/Cursor";
-// import { FiCopy } from "@react-icons/all-files/fi/FiCopy";
-// import { FiDownload } from "@react-icons/all-files/fi/FiDownload";
+import '../styles/global.scss'
+import '../styles/work.scss'
 
-// Files
-// import minesioantonioCV from "../files/minesio-antonio-resume.pdf";
-
-// Context
-import { State } from "../components/Layout";
-
-// Data
-import {
-    bioDescription,
-    careerPath,
-    academyPath,
-    // openSourcePath,
-    // volunteeringPath,
-    // hackingPath,
-} from "../data";
-
-// Images
-// import headshot from "../images/headshot.jpg";
-
-// Styles
-import "../styles/global.scss";
-import "../styles/about.scss";
-import Headshot from "../components/Headshot";
-
-const panelMap = (index) => {
-    const map = {
-        0: (
-            <ol className="career-path">
-                {/* <br />
-        <div className="border-l-2 border-[var(--border-secondary)] pl-4">
-          Check out my{" "}
-          <a
-            className="underline text-[var(--tw-text-gray-primary)] font-bold"
-            href="https://www.linkedin.com/in/cesarolvr/#experience"
-          >
-            LinkedIn experience section
-          </a>{" "}
-          for more details
-        </div> */}
-                {careerPath.map(({ role, details, description }, index) => {
-                    return (
-                        <li key={index} className="about-career-experience">
-                            <h4 className="role">{role}</h4>
-                            <br />
-                            <h5 className="infos">{details}</h5>
-                            <p className="description">{description}</p>
-                        </li>
-                    );
-                })}
-            </ol>
-        ),
-        1: (
-            <ol className="career-path -academic">
-                {academyPath.map(({ role, details }, index) => {
-                    return (
-                        <li key={index} className="about-career-experience">
-                            <h4 className="role">{role}</h4>
-                            <br />
-                            <h5 className="infos">{details}</h5>
-                        </li>
-                    );
-                })}
-            </ol>
-        )
-    };
-
-    return map[index];
-};
+const images = [
+    "1.jpg",
+    "2.jpg",
+    "3.jpg",
+    "4.jpg",
+    "5.jpg",
+    "6.jpg",
+    "7.jpg",
+    "8.jpg",
+    "9.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg",
+]
 
 const Work = () => {
-    const [activePanel, setActivePanel] = useState(0);
-    const { setCopied } = useContext(State);
 
-    const copyText = () => {
-        navigator.clipboard.writeText(bioDescription).then(() => {
-            setCopied(true);
-            setTimeout(() => {
-                setCopied(false);
-            }, 1000);
-        }, console.log);
-    };
-
+    const gallery = useRef(null);
+    const [dimension, setDimension] = useState({ width: 0, height: 0 });
     const [isOpened, setIsOpened] = useState(true);
+
     useEffect(() => {
         setTimeout(() => {
             setIsOpened(false);
         }, 800);
     }, []);
+    const { scrollYProgress } = useScroll({
+        target: gallery,
+        offset: ['start end', 'end start']
+    })
+    const { height } = dimension;
+    const y = useTransform(scrollYProgress, [0, 1], [0, height * 2])
+    const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3])
+    const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25])
+    const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3])
 
-
-    const [activeMenu, setActiveMenu] = useState(null)
     useEffect(() => {
         const lenis = new Lenis()
 
-        function raf(time) {
+        const raf = (time) => {
             lenis.raf(time)
             requestAnimationFrame(raf)
         }
 
-        requestAnimationFrame(raf)
+        const resize = () => {
+            setDimension({ width: window.innerWidth, height: window.innerHeight })
+        }
+
+        window.addEventListener("resize", resize)
+        requestAnimationFrame(raf);
+        resize();
+
+        return () => {
+            window.removeEventListener("resize", resize);
+        }
     }, [])
 
-    const isMobile =
-        typeof window !== "undefined" ? window.innerWidth < 1440 : true;
-
     return (
-        <>
-            <Cursor />
+        <main className='about'>
 
-            <div className="about">
-                <Loader isOpened={isOpened} duration={0.5} />
-                <Header goBackToHome={true} disableScramble={true} />
-                <main>
-                    <div className="h-[50vh]"></div>
-                    <Projects setActiveMenu={setActiveMenu} />
-                    <Scene activeMenu={activeMenu} />
-                    <div className="h-[50vh]"></div>
-                </main>
+            <Loader isOpened={isOpened} duration={0.5} />
+            <Header goBackToHome={true} disableScramble={true} />
+            <div>
+                {/* <div className="spacer"></div> */}
+                <div ref={gallery} className="gallery">
+                    <Column images={[images[0], images[1], images[2]]} y={y} />
+                    <Column images={[images[3], images[4], images[5]]} y={y2} />
+                    <Column images={[images[6], images[7], images[8]]} y={y3} />
+                    <Column images={[images[9], images[10], images[11]]} y={y4} />
+                </div>
+                <div className="spacer flex justify-center items-center rounded-t-xl">
+                    <Link to="https://www.behance.net/minesioantonio" className="sm:text-[18px] text-[14px] text-white underline" target='_blank'>
+                        <>{`See my portfolio ->`}</>
+                    </Link>
+                </div>
             </div>
-        </>
-    );
-};
+        </main>
+    )
+}
+
+const Column = ({ images, y }) => {
+    return (
+        <motion.div
+            className="column"
+            style={{ y }}
+        >
+            {
+                images.map((src, i) => {
+                    return <div key={i} className="imageContainer">
+                        <img
+                            src={`/${src}`}
+                            alt='image'
+                        />
+                    </div>
+                })
+            }
+        </motion.div>
+    )
+}
 
 export default Work;
 
