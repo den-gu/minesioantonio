@@ -1,30 +1,30 @@
 export const projects = [
     {
         title: "Visual Identity",
-        src: "/images/5.jpg"
+        src: "https://raw.githubusercontent.com/den-gu/minesioantonio/refs/heads/main/src/images/services/5.jpg"
     },
     {
         title: "Branding",
-        src: "/images/6.jpg"
+        src: "https://raw.githubusercontent.com/den-gu/minesioantonio/refs/heads/main/src/images/services/6.jpg"
     },
     {
         title: "Social Media Management",
-        src: "/images/7.jpg"
+        src: "https://raw.githubusercontent.com/den-gu/minesioantonio/refs/heads/main/src/images/services/7.jpg"
     },
     {
         title: "Creative Direction",
-        src: "/images/2.jpg"
+        src: "https://raw.githubusercontent.com/den-gu/minesioantonio/refs/heads/main/src/images/services/2.jpg"
     },
     {
         title: "Content Creation",
-        src: "/images/1.jpg"
+        src: "https://raw.githubusercontent.com/den-gu/minesioantonio/refs/heads/main/src/images/services/1.jpg"
     },
     {
         title: "Advertising Spot",
-        src: "/images/3.jpg"
+        src: "https://raw.githubusercontent.com/den-gu/minesioantonio/refs/heads/main/src/images/services/3.jpg"
     },
     {
         title: "Photography",
-        src: "/images/4.jpg"
+        src: "https://raw.githubusercontent.com/den-gu/minesioantonio/refs/heads/main/src/images/services/4.jpg"
     }
 ]

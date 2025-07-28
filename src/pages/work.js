@@ -79,7 +79,7 @@ const Work = () => {
                     <Column images={[images[6], images[7], images[8]]} y={y3} />
                     <Column images={[images[9], images[10], images[11]]} y={y4} />
                 </div>
-                <div className="spacer flex justify-center items-center rounded-t-xl">
+                <div className="spacer flex justify-center items-center">
                     <Link to="https://www.behance.net/minesioantonio" className="sm:text-[18px] text-[14px] text-white underline" target='_blank'>
                         <>{`See my portfolio ->`}</>
                     </Link>

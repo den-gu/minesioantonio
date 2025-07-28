@@ -9,49 +9,9 @@ import Header from "../components/Header";
 import Loader from "../components/Loader";
 import Cursor from "../components/Cursor";
 
-// Data
-import {
-    careerPath,
-    academyPath,
-} from "../data";
-
 // Styles
 import "../styles/global.scss";
 import "../styles/about.scss";
-
-const panelMap = (index) => {
-    const map = {
-        0: (
-            <ol className="career-path">
-                {careerPath.map(({ role, details, description }, index) => {
-                    return (
-                        <li key={index} className="about-career-experience">
-                            <h4 className="role">{role}</h4>
-                            <br />
-                            <h5 className="infos">{details}</h5>
-                            <p className="description">{description}</p>
-                        </li>
-                    );
-                })}
-            </ol>
-        ),
-        1: (
-            <ol className="career-path -academic">
-                {academyPath.map(({ role, details }, index) => {
-                    return (
-                        <li key={index} className="about-career-experience">
-                            <h4 className="role">{role}</h4>
-                            <br />
-                            <h5 className="infos">{details}</h5>
-                        </li>
-                    );
-                })}
-            </ol>
-        )
-    };
-
-    return map[index];
-};
 
 const Services = () => {
 
