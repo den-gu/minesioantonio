@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `cesarolvr`,
-    siteUrl: `https://www.cesarolvr.com`,
+    title: `minesioantonio`,
+    siteUrl: `https://minesioantonio.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
