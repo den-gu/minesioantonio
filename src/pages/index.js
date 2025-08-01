@@ -20,6 +20,7 @@ import "../styles/index.scss";
 import Avatar from "../components/Avatar";
 import { State } from "../components/Layout";
 import ScrambleText from "../components/ScrambleText";
+// import headshot from "../images/photo_of_minesio_4.jpg";
 
 
 // Whatsapp, Facebook, Linkedin
@@ -49,7 +50,7 @@ const IndexPage = () => {
         <main className="overflow-hidden">
           <div className="avatar-section relative">
             {/* <Avatar theme={theme} /> */}
-            <StaticImage className="-bottom-4 md:bottom-0" src="../../public/photo_of_minesio3.png" width={600} />
+            <StaticImage className="-bottom-4 md:bottom-0" src="../images/photo_of_minesio3.png" width={600} />
           </div>
           <div className="w-[90svw] banner-holder z-50 pt-[100px] sm:pointer-events-none fixed flex justify-center items-center">
             <h1 className="banner-title flex text-[var(--tw-text-gray-primary)] flex-col items-end h-full text-right font-bold w-[300px] flex-shrink-0">
