@@ -8,13 +8,15 @@ import Shortcut from "../components/Shortcut";
 import Loader from "../components/Loader";
 import Cursor from "../components/Cursor";
 import SplitTextAnimation from "../components/SplitText";
+import { StaticImage } from "gatsby-plugin-image";
 
+// import LandingImage from "./images/photo_of_minesio1.jpg"
 // Styles
 import "../styles/global.scss";
 import "../styles/index.scss";
 
 // Content
-import { articles } from "../data/blog";
+// import { articles } from "../data/blog";
 import Avatar from "../components/Avatar";
 import { State } from "../components/Layout";
 import ScrambleText from "../components/ScrambleText";
@@ -26,6 +28,11 @@ const IndexPage = () => {
   const [isOpened, setIsOpened] = React.useState(true);
   const avatarRef = React.useRef(null);
   const { theme, onThemeChange } = React.useContext(State);
+
+  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  const date = new Date();
+
+  let day = weekdays[date.getDay()];
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -40,9 +47,10 @@ const IndexPage = () => {
         <Loader isOpened={isOpened} duration={1} />
         <Header hideShortcut onThemeChange={onThemeChange} theme={theme} />
         <main className="overflow-hidden">
-          {/* <div className="avatar-section">
-            <Avatar theme={theme} />
-          </div> */}
+          <div className="avatar-section relative">
+            {/* <Avatar theme={theme} /> */}
+            <StaticImage className="-bottom-4 md:bottom-0" src="../../public/photo_of_minesio3.png" width={600} />
+          </div>
           <div className="w-[90svw] banner-holder z-50 pt-[100px] sm:pointer-events-none fixed flex justify-center items-center">
             <h1 className="banner-title flex text-[var(--tw-text-gray-primary)] flex-col items-end h-full text-right font-bold w-[300px] flex-shrink-0">
               <ScrambleText
@@ -71,15 +79,14 @@ const IndexPage = () => {
                     placeholder="."
                   />
                 </strong>{" "} */}
-                Humano que resolve problemas visuais
-                agregando personalidade e valor à marcas e empresas.
+                A human who solves visual problems by adding personality and value to brands and businesses.
                 {/* having fun crafting digital experiences */}
               </p>
               <Shortcut text="to start" />
             </div>
           </div>
 
-          <Link
+          {/* <Link
             to="/blog"
             title="soon"
             className="blog-ticker-title  text-[var(--tw-text-gray-secondary)] fixed z-[100] left-[20px] sm:text-[18px] text-[14px]"
@@ -89,14 +96,30 @@ const IndexPage = () => {
               className="scramble-text"
               duration={2}
             />
-          </Link>
-          <p className="fixed z-[100] sm:text-[18px] text-right text-underline sm:bottom-[60px] text-[14px] right-[20px] text-[var(--tw-text-gray-secondary)] bottom-[65px]">
+          </Link> */}
+          <p className="fixed z-[100] sm:text-[18px] text-left text-underline sm:bottom-[40px] text-[14px] left-[20px] text-[var(--tw-text-gray-secondary)] bottom-[65px]">
+            <ScrambleText
+              text="Weekday"
+              className="scramble-text"
+              duration={3.5}
+            />
+            <span className="underline cursor-pointer">
+              <strong>
+                <ScrambleText
+                  text={day}
+                  className="scramble-text"
+                  duration={3.9}
+                />
+              </strong>
+            </span>
+          </p>
+          <p className="fixed z-[100] sm:text-[18px] text-right text-underline sm:bottom-[40px] text-[14px] right-[20px] text-[var(--tw-text-gray-secondary)] bottom-[65px]">
             <ScrambleText
               text={`Want to hire me?`}
               className="scramble-text"
               duration={2}
             />
-            <a className="underline " href="mailto:contact@cesarolvr.com">
+            <a className="underline " href="mailto:info@minesioantonio.com">
               <ScrambleText
                 text={`info@minesioantonio.com`}
                 className="scramble-text"
@@ -104,7 +127,7 @@ const IndexPage = () => {
               />
             </a>
           </p>
-          <div className="blog-ticker">
+          {/* <div className="blog-ticker">
             <div className="blog-ticker-wrapper">
               {articles
                 .flatMap((yearGroup) => yearGroup.posts)
@@ -133,9 +156,9 @@ const IndexPage = () => {
                   );
                 })}
             </div>
-          </div>
+          </div> */}
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

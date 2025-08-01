@@ -42,10 +42,12 @@ const Services = () => {
                 <Loader isOpened={isOpened} duration={0.5} />
                 <Header goBackToHome={true} disableScramble={true} />
                 <main>
-                    <div className="h-[50vh]"></div>
-                    <Projects setActiveMenu={setActiveMenu} />
-                    <Scene activeMenu={activeMenu} />
-                    <div className="h-[50vh]"></div>
+                    <div className="hidden md:block h-[50vh]"></div>
+                    <Projects
+                    // setActiveMenu={setActiveMenu}
+                    />
+                    {/* <Scene activeMenu={activeMenu} /> */}
+                    {/* <div className="h-[50vh]"></div> */}
                 </main>
             </div>
         </div>

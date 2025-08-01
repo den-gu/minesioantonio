@@ -22,27 +22,27 @@ atrativos e duradouros.`;
 
 const careerPath = [
   {
-    role: "Gestor de Marketing | Designer Grafico",
-    details: `Mapendzi | Maputo, Moçambique | 2023`,
+    role: "Marketing Manager | Graphic Designer",
+    details: `Mapendzi | Maputo, Mozambique | 2023`,
   },
   {
-    role: "Gestor de Marketing | Designer Grafico",
-    details: `MY BUBU's | Maputo, Moçambique | 2023`,
+    role: "Marketing Manager | Graphic Designer",
+    details: `MY BUBU's | Maputo, Mozambique | 2023`,
   },
   {
-    role: "Gestor de Marketing | Designer Grafico",
-    details: `Pepsi co Mozambique | Maputo, Moçambique | 2018 -> 2019`,
+    role: "Marketing Manager | Graphic Designer",
+    details: `PepsiCo Mozambique | Maputo, Mozambique | 2018 -> 2019`,
   }
 ];
 
 const academyPath = [
   {
-    role: "INFORMÁTICA E TELECOMUNICAÇÕES",
+    role: "Information Technology and Telecommunications",
     details: `IPET | Maputo, Moçambique | 2017 -> 2020`,
   },
   {
-    role: "COMPUTER SCIENCE",
-    details: `USTM | Maputo, Moçambique | 2014 -> 2016`,
+    role: "Computer Science",
+    details: `USTM | Maputo, Mozambique | 2014 -> 2016`,
   },
   // {
   //   role: "Summer Programm in Usability Engineering",

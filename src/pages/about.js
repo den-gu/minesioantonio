@@ -26,7 +26,7 @@ import {
 } from "../data";
 
 // Images
-import headshot from "../images/headshot.jpg";
+import headshot from "../images/photo_of_minesio_4.jpg";
 
 // Styles
 import "../styles/global.scss";
@@ -177,10 +177,7 @@ const About = () => {
           <div className="bio column">
             <h3 className="about-title mb-2 font-bold text-[18px]">Bio</h3>
             <p className="paragraph">
-              Sou um Humano que quer resolver problemas visuais, agregando
-              personalidade e valor às marcas e empresas, utilizando
-              ferramentas modernas faço o meu melhor para tornar os visuais
-              atrativos e duradouros.
+              I'm a human who aims to solve visual problems by adding personality and value to brands and businesses. Using modern tools, I do my best to create visuals that are both appealing and enduring.
             </p>
             {/* <p className="paragraph">
               I'm really focused about resolve real problems through technology,

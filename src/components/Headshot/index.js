@@ -7,7 +7,7 @@ import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js"
 import { State } from "../Layout";
 
 // Images
-import headshot from "../../images/headshot.jpg";
+import headshot from "../../images/photo_of_minesio_4.jpg";
 
 // Styles
 import "./index.scss";

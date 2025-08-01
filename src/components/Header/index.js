@@ -56,7 +56,7 @@ const Header = ({ onThemeChange, theme, disableScramble = false }) => {
                 />
               </strong>
             </span>
-            <br />
+            {/* <br />
             <span onClick={onThemeChange} className="underline cursor-pointer">
               <strong>
                 <ScrambleText
@@ -65,7 +65,7 @@ const Header = ({ onThemeChange, theme, disableScramble = false }) => {
                   duration={3.9}
                 />
               </strong>
-            </span>
+            </span> */}
           </p>
           <br />
         </div>
@@ -165,7 +165,7 @@ const Header = ({ onThemeChange, theme, disableScramble = false }) => {
           </Link>
         </li> */}
 
-        <li>
+        {/* <li>
           <Link
             to="/work"
             className={pathname?.startsWith("/work") ? `-active` : ``}
@@ -180,7 +180,7 @@ const Header = ({ onThemeChange, theme, disableScramble = false }) => {
               <>Featured work</>
             )}
           </Link>
-        </li>
+        </li> */}
 
         {/* <li>
           <a href="https://github.com/cesarolvr/" target="_blank">
