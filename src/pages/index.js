@@ -48,7 +48,8 @@ const IndexPage = () => {
         <Loader isOpened={isOpened} duration={1} />
         <Header hideShortcut onThemeChange={onThemeChange} theme={theme} />
         <main className="overflow-hidden">
-          <div className="avatar-section relative">
+          <div className="avatar-section">
+            {/* Trying to show centered image */}
             {/* <Avatar theme={theme} /> */}
             <StaticImage className="-bottom-4 md:bottom-0" src="../images/photo_of_minesio3.png" width={600} />
           </div>
