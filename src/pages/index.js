@@ -48,10 +48,10 @@ const IndexPage = () => {
         <Loader isOpened={isOpened} duration={1} />
         <Header hideShortcut onThemeChange={onThemeChange} theme={theme} />
         <main className="overflow-hidden">
-          <div className="avatar-section">
+          <div className="avatar-section flex justify-center">
             {/* Trying to show centered image */}
             {/* <Avatar theme={theme} /> */}
-            <StaticImage className="-bottom-4 md:bottom-0" src="../images/photo_of_minesio3.png" width={600} />
+            <StaticImage className="-bottom-4 md:bottom-0" src="../images/photo_of_minesio3.png" width={700} />
           </div>
           <div className="w-[90svw] banner-holder z-50 pt-[100px] sm:pointer-events-none fixed flex justify-center items-center">
             <h1 className="banner-title flex text-[var(--tw-text-gray-primary)] flex-col items-end h-full text-right font-bold w-[300px] flex-shrink-0">
