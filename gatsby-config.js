@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `minesioantonio`,
-    siteUrl: `https://minesioantonio.netlify.app`,
+    siteUrl: `https://minesioantonio.com`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -26,7 +26,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/favicon.png",
       },
     },
     "gatsby-plugin-sharp",
@@ -42,13 +42,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "minesioantonio.netlify.app",
+        name: "minesioantonio.com",
         short_name: "minesioantonio",
         start_url: "/",
         background_color: "#222222",
         theme_color: "#222222",
         display: "standalone",
-        icon: "src/images/icon.png",
+        icon: "src/images/favicon.png",
         crossOrigin: `use-credentials`,
       },
     },
